@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        input[type=text]{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        input[type=email]{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        input[type=password]{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        input[type=date]{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        input[type=submit] {
+            background-color: #F97316;
+            color: white;
+            padding: 12px 0;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+    <form action="name">이름</form>
+    <input type="text">
+    </table>
+    <table>
+    <form action="email">이메일</form>
+    <input type="email">
+    </table>
+    <table>
+    <form action="password">비밀번호</form>
+    <input type="password">
+    </table>
+    <table>
+    <form action="date">생년월일</form>
+    <input type="date">
+    </table>
+    <table>
+    <form action="">성별</form>
+    <input type="radio">남
+    <input type="radio">여
+    </table>
+    <table>
+    <form action="">관심분야 :</form>
+    <label for="">Java</label>
+    <input type="checkbox">
+    <label for="">Python</label>
+    <input type="checkbox">
+    <label for="">javaScript</label>
+    <input type="checkbox">
+    </table>
+    <table>
+    <form action="name">자기소개</form>
+    <textarea name="" id="" rows="5" cols="40"></textarea>
+    </table>
+    <table>
+    <input type="submit" value="가입하기">
+    </table>
+</body>
+</html>
