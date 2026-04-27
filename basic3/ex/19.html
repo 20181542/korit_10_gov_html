@@ -1,0 +1,36 @@
+DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let sayHello = (name, greeting) => {
+             return (greeting ?? "안녕하세요") + ", " + name + "님";
+        }
+
+        console.log(sayHello("준일"));
+        console.log(sayHello("준일", "반갑습니다"));
+
+        function sayHello1(name) {
+            console.log(`출력: 안녕하세요, ${name}님!`);
+        }
+
+        function sayHello1(name, greeting = "안녕하세요") {
+            console.log(`출력: ${greeting}, ${name}님!`);
+        }
+        
+        function sayHello1(name, greeting) {
+            if (greeting ===undefined) {
+                greeting = "안녕하세요";
+            }
+            console.log(`출력: ${greeting}, ${name}님!`);
+        }
+        sayHello1("준일");
+        sayHello1("준일", "반갑습니다");
+
+    </script>
+</body>
+</html>

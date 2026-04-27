@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum;
+        function stats(...params) {
+            console.log(params);
+            let sum = 0;
+            let avg = 0;
+            for (let i = 0; i < params.length; i++) {
+                sum += params[i];
+                console.log(sum);
+            }
+            console.log(sum);
+            console.log(params.length)
+            avg = sum/ params.length;
+            return { 
+                sum, 
+                avg 
+            };
+        }
+        console.log(stats(10, 20, 30));
+        console.log(stats(5, 15, 25, 35, 40));
+    </script>
+</body>
+</html>

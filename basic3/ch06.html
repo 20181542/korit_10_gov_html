@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100vh;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 1200px;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            box-shadow: 0 0 5px #00000044;
+            padding: 20px;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            padding: 5px 10px;
+            width: 360px;
+            height: 50px;
+            outline: hidden;
+
+            /* & = label 의 부모 */
+            & > label {
+                transition: all 0.3s ease-in-out;
+                transform: translateY(-50%);
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                background-color: transparent;
+                font-size: 16px;
+                color: #444;
+            }
+
+            & > input {
+                transition: all 0.3s ease-in-out;
+                position: relative;
+                z-index: 10;
+                outline: none;
+                border: none;
+                width: 100%;
+                height: 100%;
+                background-color: #00000000;
+            }
+        }
+        .input-is-not-empty {
+            & > label {
+                font-size: 12px;
+                top: 25%;
+            }
+            & > input {
+                top: 30%;
+                height: 80%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="input-box">
+                <input type="text" id="un" name="username">
+                <label for="">사용자 이름</label>
+            </div>
+            <div class="input-box">
+                <input type="password" id="pw" name="password">
+                <label for="">비밀번호</label>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const inputBoxs = document.querySelectorAll(".input-box");
+        for (let inputBox of inputBoxs) {
+            const inputElements = inputBox.querySelector("input")
+            inputElements.onfocus = (event) => {
+                inputBox.classList.add("input-is-not-empty");
+            }
+
+            inputElements.onblur = (event) => {
+                if(!event.target.value) {
+                    inputBox.classList.remove("input-is-not-empty");
+                }
+            }
+        }
+
+        const inputElements = inputBoxs[0].querySelectorAll(".input-box > input");
+    </script>
+</body>
+</html>
+
+
+선택자 - 타입 태그 : div input p  
+       - 클래스 : 
+       - id : id는 하나이기 때문에 querySelector로가져옴
+
+
+querySelector = object
+querySelectorAll = Array
+
+함수가 동작 하려면 호출을 무조건 해야함
