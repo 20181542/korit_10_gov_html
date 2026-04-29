@@ -147,7 +147,7 @@
                 id: getNewId(),
             }
 
-            Array.from(inputs)(element => {
+            Array.from(inputs).forEach(element => {
                 const {name, value} = element;
                 newUser = {
                     ...newUser,
